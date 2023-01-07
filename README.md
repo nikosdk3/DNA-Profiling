@@ -17,7 +17,7 @@ App that builds DNA strands using a self-implemented vector class and determines
 - `search`
 - `display`
 
-## Example execution
+## Sample execution
 
 ```
 Welcome to the DNA Profiling Application.
