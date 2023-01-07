@@ -1,0 +1,63 @@
+﻿Welcome to the DNA Profiling Application.
+Enter command or # to exit: load_db small.txt
+Loading database...
+Enter command or # to exit: load_dna 1.txt
+Loading DNA...
+Enter command or # to exit: process
+Processing DNA...
+Enter command or # to exit: search
+Searching Database...
+Found in database!  DNA matches: Bob
+Enter command or # to exit: getCancerRisk
+Enter individual's name: Bob
+Bob's cancer risk is 66.6667%
+The bad strand count was 4 2 5
+Enter command or # to exit: display
+Database loaded:
+Alice 2 8 3
+Bob 4 1 5
+Charlie 3 2 5
+
+
+DNA Loaded:
+AAGGTAAGTTTAGAATATAAAAGGTGAGTTAAATAGAATAGGTTAAAATTAAAGGAGATCAGATCAGATCAGATCTATCTATCTATCTATCTATCAGAAAAGAGTAAATAGTTAAAGAGTAAGATATTGAATTAATGGAAAATATTGTTGGGGAAAGGAGGGATAGAAGG
+
+
+DNA processed, STR counts:
+AGATC: 4
+AATG: 1
+TATC: 5
+
+
+Enter command or # to exit: #
+*********************************************************
+ourvector<9ourvectorIcE> stats:
+ # of vectors created:   1
+ # of elements inserted: 3
+ # of elements accessed: 2053
+*********************************************************
+*********************************************************
+ourvector<6people> stats:
+ # of vectors created:   1
+ # of elements inserted: 3
+ # of elements accessed: 102
+*********************************************************
+
+
+*********************************************************
+ourvector<i> stats:
+ # of vectors created:   15
+ # of elements inserted: 42
+ # of elements accessed: 89
+*********************************************************
+*********************************************************
+ourvector<c> stats:
+ # of vectors created:   13
+ # of elements inserted: 209
+ # of elements accessed: 1747
+*********************************************************
+
+
+
+
+The ourvector<ourvector<char>> is created in main() on line 439. There are three ourvector<c> elements inserted in ourvector<ourvector<char>> after the loop at line 70 which are the str types. There are 2053 elements accessed when process is run. This happens on line 172 and 200. The ourvector<people> vector is created in main on line 438. There are three people structs stored into this vector on line 112 in the storeData function since there are three people in the database. This vector is accessed 16 times at displayDatabase(), 2 times when search is input, and 84 times when getCancerRisk() is run. The ourvector<int> vector is created 6 times initially: 2 on line 437, and 4 on line 438. 8 more come from the str counts pushed into the struct on line 112. There is another ourvector<int> called on line 341 for my creative component which totals 15. Since the vector strcount is being pushed into the struct at line 111 which also contains ourvector<int>, the 9 values in strcount are inserted 4 more times which equals 36. There are 3 more insertions when searchDB is called. There are three ints also inserted on line 360. The ourvector<int> elements are accessed on lines 353, 354, and 360. For ourvector<char> there are five vectors created: 1 on line 436, and 4 on line 439. There are 8 more vectors created on lines 53-55. There are 39 elements inserted when load_db is input. This happens when line 67 is run because it pushes each element into the char vector and also at line 62 and 70 since each element from the char vector has to get copied into the vector of char vectors. Then there are 170 more characters inserted into the vector passed by reference on line 141. These elements are inserted on line 149. There are 26 elements accessed when load_db is input. This happens at line 62 since strseq pushes back each tempDNA which contains a sequence of characters. Process accesses an additional 1551 elements on lines 200, 170, and 172. The rest of the elements are accessed on line 160.
